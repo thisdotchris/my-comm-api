@@ -8,7 +8,7 @@ import {
   Delete,
   Param,
 } from '@nestjs/common';
-import { FeedService } from 'src/services/feed.service';
+import { FeedService } from 'src/feed/feed.service';
 import { Feed } from 'src/interfaces/feed.interface';
 
 @Controller('v1/feeds')

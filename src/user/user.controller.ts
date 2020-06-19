@@ -8,7 +8,7 @@ import {
   Delete,
   Param,
 } from '@nestjs/common';
-import { UserService } from 'src/services/user.service';
+import { UserService } from 'src/user/user.service';
 import { User } from 'src/interfaces/user.interface';
 
 @Controller('v1/users')

@@ -8,7 +8,7 @@ import {
   Delete,
   Param,
 } from '@nestjs/common';
-import { CommentService } from 'src/services/comment.service';
+import { CommentService } from 'src/comment/comment.service';
 import { Comment } from './../interfaces/comment.interface';
 
 @Controller('v1/comments')

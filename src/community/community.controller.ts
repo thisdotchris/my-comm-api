@@ -8,7 +8,7 @@ import {
   Delete,
   Param,
 } from '@nestjs/common';
-import { CommunityService } from 'src/services/community.service';
+import { CommunityService } from 'src/community/community.service';
 import { Community } from 'src/interfaces/community.interface';
 
 @Controller('v1/communities')

@@ -8,7 +8,7 @@ import {
   Delete,
   Param,
 } from '@nestjs/common';
-import { MessageService } from 'src/services/message.service';
+import { MessageService } from 'src/message/message.service';
 import { Message } from 'src/interfaces/message.interface';
 
 @Controller('v1/messages')

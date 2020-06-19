@@ -1,4 +1,4 @@
-import { CommentService } from './../services/comment.service';
+import { CommentService } from './comment.service';
 import { Module } from '@nestjs/common';
 import { CommentController } from './comment.controller';
 import { CommnentSchema } from 'src/models/comment.model';
