@@ -8,11 +8,12 @@ import { CommunityModule } from './community/community.module';
 import { FeedModule } from './feed/feed.module';
 import { CommentModule } from './comment/comment.module';
 import { MessageModule } from './message/message.module';
+
 @Module({
   imports: [
     ConfigModule.forRoot(),
     MongooseModule.forRoot(
-      `mongodb://${process.env.HOST}:${process.env.PORT}/${process.env.DB_NAME}`,
+      `mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`,
     ),
     UserModule,
     CommunityModule,

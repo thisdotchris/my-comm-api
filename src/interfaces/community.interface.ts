@@ -3,4 +3,5 @@ export interface Community {
   socket_id: string;
   name: string;
   description: string;
+  creator: string;
 }

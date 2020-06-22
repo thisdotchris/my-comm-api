@@ -13,7 +13,12 @@ export class UserService {
   ) {}
 
   async getUser(obj = {}) {
-    return this.userModel.find(obj).populate('communities');
+    return this.userModel.find(obj).populate({
+      path: 'communities',
+      populate: {
+        path: 'creator',
+      },
+    });
   }
 
   async addUser(user: UserInterface) {

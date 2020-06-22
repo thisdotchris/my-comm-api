@@ -24,6 +24,15 @@ export class UserController {
     }
   }
 
+  @Get(':_id')
+  async getUserById(@Param('_id') _id: string) {
+    try {
+      return this.userService.getUser({ _id });
+    } catch (error) {
+      throw new UnauthorizedException(error);
+    }
+  }
+
   @Post()
   async addUser(@Body() user: User) {
     try {
