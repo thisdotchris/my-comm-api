@@ -5,6 +5,7 @@ export class Message extends Document {
     private community: string,
     private user: string,
     private message: string,
+    private date: string,
   ) {
     super();
   }
@@ -20,4 +21,5 @@ export const MessageSchema = new Schema({
     ref: 'users',
   },
   message: String,
+  date: { type: Date, default: Date.now },
 });

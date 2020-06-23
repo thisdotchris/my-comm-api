@@ -26,4 +26,8 @@ export class CommentService {
   async removeComment(_id: string) {
     return this.commentModel.deleteOne({ _id });
   }
+
+  async getCommentOfFeed(_id: string) {
+    return this.commentModel.find({ feed: _id });
+  }
 }

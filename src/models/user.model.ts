@@ -8,6 +8,7 @@ export class User extends Document {
     private email: string,
     private socket_id: string,
     private communities: Array<any>,
+    private date: string,
   ) {
     super();
   }
@@ -25,4 +26,5 @@ export const UserSchema = new Schema({
       ref: 'communities',
     },
   ],
+  date: { type: Date, default: Date.now },
 });

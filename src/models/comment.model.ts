@@ -5,6 +5,8 @@ export class Comment extends Document {
     private feed: string,
     private user: string,
     private comment: string,
+    private date: string,
+    private hearts: number,
   ) {
     super();
   }
@@ -20,4 +22,6 @@ export const CommnentSchema = new Schema({
     ref: 'users',
   },
   comment: String,
+  data: { type: Date, default: Date.now },
+  hearts: { type: Number, default: 0 },
 });

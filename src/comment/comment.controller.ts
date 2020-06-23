@@ -24,6 +24,15 @@ export class CommentController {
     }
   }
 
+  @Get('/feed/:_id')
+  async getCommentOfFeed(@Param('_id') _id: string) {
+    try {
+      return await this.commentService.getCommentOfFeed(_id);
+    } catch (error) {
+      throw new UnauthorizedException(error);
+    }
+  }
+
   @Post()
   async addComment(@Body() comment: Comment) {
     try {

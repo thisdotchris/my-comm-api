@@ -6,6 +6,7 @@ export class Community extends Document {
     private name: string,
     private description: string,
     private creator: string,
+    private date: string,
   ) {
     super();
   }
@@ -19,4 +20,5 @@ export const CommunitySchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'users',
   },
+  date: { type: Date, default: Date.now },
 });

@@ -6,6 +6,8 @@ export class Feed extends Document {
     private description: string,
     private communiity: string,
     private user: string,
+    private date: string,
+    private stars: number,
   ) {
     super();
   }
@@ -22,4 +24,6 @@ export const FeedSchema = new Schema({
     type: String,
     ref: 'users',
   },
+  date: { type: Date, default: Date.now },
+  stars: Number,
 });

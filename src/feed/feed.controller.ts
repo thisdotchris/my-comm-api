@@ -50,4 +50,13 @@ export class FeedController {
       throw new UnauthorizedException(error);
     }
   }
+
+  @Get('/user/:_id')
+  async getFeedsOfUser(@Param('_id') _id: string) {
+    try {
+      return this.feedService.getFeedsOfUser(_id);
+    } catch (error) {
+      throw new UnauthorizedException(error);
+    }
+  }
 }
